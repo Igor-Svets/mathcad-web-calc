@@ -140,7 +140,7 @@ if page == "Головний калькулятор":
                 "2. Повітря: O2", "2. Повітря: N2", "РАЗОМ ПРИХІД"
             ],
             "Об'єм, нм3/год": [v_h2s_vkh, v_co2_vkh, v_hcn_vkh, v_h2o_vkh, v_o2_zag, v_n2_air, (v_vkh + v_air)],
-            "Mass, кг/год": [g_h2s_vkh, g_co2_vkh, g_hcn_vkh, g_h2o_vkh, g_o2, g_n2_air, (g_h2s_vkh + g_co2_vkh + g_hcn_vkh + g_h2o_vkh + g_o2 + g_n2_air)]
+            "Маса, кг/год": [g_h2s_vkh, g_co2_vkh, g_hcn_vkh, g_h2o_vkh, g_o2, g_n2_air, (g_h2s_vkh + g_co2_vkh + g_hcn_vkh + g_h2o_vkh + g_o2 + g_n2_air)]
         }
         
         # Вихід
@@ -156,7 +156,7 @@ if page == "Головний калькулятор":
         df_prikhod = pd.DataFrame(prikhod_data)
         df_vykhod = pd.DataFrame(vykhod_data)
         
-        df_prikhod_formatted = df_prikhod.style.format({"Об'єм, нм3/год": "{:.2f}", "Mass, кг/год": "{:.2f}"})
+        df_prikhod_formatted = df_prikhod.style.format({"Об'єм, нм3/год": "{:.2f}", "Маса, кг/год": "{:.2f}"})
         df_vykhod_formatted = df_vykhod.style.format({"Об'єм, нм3/год": "{:.2f}", "Маса, кг/год": "{:.2f}"})
         
         st.subheader("ПРИХІД балансу")
